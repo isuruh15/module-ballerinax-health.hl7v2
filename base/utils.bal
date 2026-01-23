@@ -750,7 +750,10 @@ isolated function parsePrimitive(anydata|PrimitiveType typ, anydata value) {
         } else {
             typ.value = value;
         }
+    } else if typ is varies {
+        typ.value = value;
     }
+        
 }
 
 # Encodes HL7 message model to encoded wire format.

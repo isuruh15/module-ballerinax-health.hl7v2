@@ -25,6 +25,19 @@
 public type CompositeType record {
 };
 
+# Core type for handle varies datatype.
+#
+# + value - field description
+@TypeDefinition {
+    length: (),
+    maxReps: (),
+    required: false
+}
+public type varies record {
+    *CompositeType;
+    anydata value?;
+};
+
 # Primitive HL7 datatype.
 #
 # + value - data held by the data instance

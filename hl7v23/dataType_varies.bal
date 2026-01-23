@@ -18,11 +18,12 @@ import ballerinax/health.hl7v2;
 
 # Data type description
 #
+# + value - Variable data field
 @hl7v2:TypeDefinition {
     length: (),
     maxReps: (),
     required: false
 }
 public type varies record {
-    *hl7v2:CompositeType;
+    *hl7v2:varies;
 };
